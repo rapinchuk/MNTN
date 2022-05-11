@@ -1,0 +1,67 @@
+.footer
+    padding: 200px 0 100px 0
+    display: flex
+    justify-content: space-between
+    @include  for-tablet-landscape-up 
+        padding: 100px 0 50px 0
+    &__nav
+        display: flex
+    &__slogan
+        margin-top: 24px
+    &__copy
+        font-family: 'Aclonica',sans-serif
+        opacity: 0.5
+
+.footer__logo
+    font-family: 'Abhaya Libre Medium',sans-serif
+    font-weight: 500
+    @include adaptiveFonts(18, 14, 1462)
+    line-height: 178%
+    color: $colorWhite
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+
+
+.footer__slogan,
+.footer__copy
+    display: block
+
+
+ul
+    list-style: none
+    margin: 0
+    padding: 0
+
+
+.more-blog
+    padding-right: 200px
+
+
+.more-blog__title,
+.more__title
+    font-family: 'Abhaya Libre Medium'
+    font-weight: 500
+    @include adaptiveFonts(24, 18, 1462)
+    line-height: 133%
+    margin: 0
+    color: $accent
+
+
+.more-blog__list,
+.more__list
+    margin-top: 24px
+    font-family: 'Abhaya Libre Medium',sans-serif
+    font-weight: 500
+    font-size: 18px
+    line-height: 178%
+    color: $colorWhite
+
+.more-blog__list-item,
+.more__list-item
+    a
+        transition: 0.5s ease
+    a:hover
+        color: $accent 
+    &+&
+        margin-top: 16px

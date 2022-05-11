@@ -1,0 +1,110 @@
+.container
+    max-width: 1462px
+    margin: 0 auto
+    padding: 0 40px
+.page
+    
+    position: relative
+    z-index: 3
+    background-color: $bgColor
+    color: white
+    &::before
+        content: ""
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 100px
+        pointer-events: none
+        transform: translate(0,-100%)
+        background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(11,29,38,1) 100%)
+
+#_reveal
+    transform: translate(0%,0%)
+    opacity: 1
+.card-content
+    transform: translate(-30%,0%)
+    opacity: 0
+    transition: 0.8s all
+    position: relative
+    max-width: 632px
+    margin: 120px 115px 0 150px
+
+    @include for-desktop-up 
+        margin: 120px 0px 0 150px
+    @include  for-tablet-landscape-up
+        margin: 0 auto  
+  
+    &__paragraph
+        font-family: 'Abhaya Libre Medium',sans-serif
+        font-weight: 500
+        @include adaptiveFonts(18, 10,1462)
+        line-height: 178%
+        color: $colorWhite
+    &__title
+        font-family: "Aclonica",
+        font-weight: 500
+        @include adaptiveFonts(40, 18,1462)
+        line-height: 120%
+    &::before
+        content: ""
+        font-family: 'Abhaya Libre Medium'
+        font-weight: 500
+        @include adaptiveFonts(240, 100,1462)
+        line-height: 240px
+        color: #FFFFFF
+        opacity: 0.1
+        position: absolute
+        top: -25%
+        left: -25%
+#card1::before
+    content: "01"
+ 
+
+#card2::before
+    content: "02"
+   
+
+#card3::before
+    content: "03"
+
+
+
+.read-more
+    color: $accent
+    text-decoration: none
+
+
+.card
+    display: flex
+    justify-content: space-between
+    align-items: center
+    &+&
+        margin-top: 200px
+        @include  for-tablet-landscape-up
+            margin-top: 100px
+    &__image
+        transform: translate(0, 30%)
+        transition: 1s all
+        opacity: 0
+        max-width: 566px
+      
+       
+    &__image img
+        width: 100%
+        margin: 0
+        padding: 0
+        display: block
+
+.card2
+    flex-direction: row-reverse
+    @include  for-tablet-landscape-up  
+        flex-direction: row
+        margin: 0 auto
+    & .card-content
+        margin: 120px 0 0 230px
+        @include for-desktop-up 
+            margin: 120px 0px 0 150px
+        @include  for-tablet-landscape-up 
+            margin: 0px 0px 0 140px
+

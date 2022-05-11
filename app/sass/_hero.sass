@@ -1,0 +1,129 @@
+.hero-wrap
+    width: 100%
+    min-height: 100vh
+.parallax 
+    position: absolute
+    min-height: 100vh
+    width: 100%
+    &__body 
+        display: flex
+        justify-content: center
+        align-items: center
+        position: fixed
+        width: 100%
+        height: 100%
+        top: 0
+        left: 0
+    &__body::after
+        content: ""
+        position: absolute
+        top: 0
+        bottom: 0
+        left: 0
+        right: 0 
+        z-index: 1
+        background: linear-gradient(312deg, rgba(0,0,0,0) 0%, rgba(23,23,24,1) 100%) 
+
+    &__content 
+        position: relative
+        padding-top: 90px
+        z-index: 100
+        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25))
+       
+    
+    &__label 
+        color: $accent
+        font-family: 'Abhaya Libre SemiBold',sans-serif
+        font-weight: 500
+        @include adaptiveFonts(18, 14, 1920)
+        line-height: 21px
+        letter-spacing: 6px
+        text-transform: uppercase
+        align-items: center
+        display: flex
+    &__label::before
+        content: ""
+        flex: 0 0 72px
+        margin: 0 30px 0 0 
+        height: 1px
+        background-color:  $accent
+    &__title 
+        font-family: 'Abhaya Libre Medium',sans-serif
+        font-weight: 500
+        @include adaptiveFonts(50, 54, 1920)
+        line-height: 150%
+        text-transform: uppercase
+        color: #FFFFFF
+        
+       
+		
+
+.parallax__images
+    position: absolute
+    width: 120%
+    height: 120%
+    top: -10%
+    left: -10%
+    z-index: 1
+
+    
+
+.images-parallax__item 
+    position: absolute
+    width: 100%
+    height: 100%
+    top: 0 
+    left: 0
+
+.images-parallax__clouds,	
+.images-parallax__mountains,
+.images-parallax__human
+    position: absolute
+    width: 100%
+    height: 100%
+    left: 0
+		
+.images-parallax__clouds
+    background: url("../img/HG.png") top / cover no-repeat
+    top: 0
+
+.images-parallax__mountains
+    background: url("../img/MG.png") top / cover no-repeat
+    top: 15%
+    z-index: 2
+.images-parallax__human
+    background: url("../img/VG.png") top / cover no-repeat    
+    top: 45%
+    z-index: 3     
+
+@media (max-aspect-ratio: 3/2)
+    .images-parallax__human
+        background-position: 20% top
+
+
+.scroll
+    text-decoration: none
+    font-family: 'Abhaya Libre'
+    font-size: 18px
+    font-weight: 500
+    line-height: 21px
+    color: $colorWhite
+    display: flex
+    align-items: center
+    svg
+        margin-left: 24px
+
+
+
+
+//for anim
+
+.parallax__content
+    transition: 1s ease opacity 
+    opacity: 0
+    &.ready
+        opacity: 1
+        
+
+
+

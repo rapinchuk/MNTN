@@ -1,0 +1,57 @@
+.header 
+    max-width: 1760px
+    margin: 0 auto
+    position: absolute
+    top: 0
+    left: 0
+    right: 0
+    z-index: 1
+    padding: 58px 88px 0 88px
+    display: flex
+    justify-content: space-between
+    align-items: center
+
+    &__nav-link + &__nav-link
+        margin-left: 50px
+    &__nav-link
+        @include  adaptiveFonts(17, 14, 1652)
+        text-decoration: none   
+        font-family: 'Abhaya Libre Medium',sans-serif
+        font-weight: 500
+        line-height: 21px
+        color: $colorWhite
+        transition: 0.5s
+    &__nav-link:hover
+        color: $accent
+    &__account-link
+        transition: 0.5s
+        font-family: 'Abhaya Libre Medium',sans-serif
+        font-style: normal
+        font-weight: 500
+        @include  adaptiveFonts(17, 14, 1652)
+        line-height: 20px
+        color: $colorWhite
+        text-decoration: none 
+        margin-left: 8px
+        &:hover
+            text-decoration: $accent  underline
+
+    &__account
+        display: flex
+        align-items: center
+
+.logo 
+    &__content 
+        font-family: 'Aclonica',sans-serif
+        font-weight: 400
+        @include  adaptiveFonts(32, 16, 1652)
+        line-height: 36px
+        letter-spacing: 0.01em
+        text-transform: uppercase
+        color: $colorWhite
+        text-decoration: none
+                
+
+
+	
+
